@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 StreamerDbContext dbContext = new();
 
-await AddNewRecordAsync();
+//await AddNewRecordAsync();
 QueryStreaming();
-await QueryFilter();
+//await QueryFilter();
 
 void QueryStreaming()
 {
