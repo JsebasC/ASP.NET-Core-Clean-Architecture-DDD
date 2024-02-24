@@ -15,7 +15,7 @@ namespace CleanArchitecture.Application.Behaviours
 
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
-            if(_validators.Any())
+            if (_validators.Any())
             {
                 var context = new ValidationContext<TRequest>(request);
 
@@ -23,13 +23,13 @@ namespace CleanArchitecture.Application.Behaviours
 
                 var failures = validationResults.SelectMany(validation => validation.Errors).Where(result => result != null).ToList();
 
-                if(failures.Count != 0)
+                if (failures.Count != 0)
                 {
                     throw new ValidationException(failures);
                 }
             }
 
-            return await next(); 
+            return await next();
         }
     }
 }
