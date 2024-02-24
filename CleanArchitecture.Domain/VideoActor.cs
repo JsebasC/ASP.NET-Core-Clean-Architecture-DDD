@@ -1,6 +1,8 @@
-﻿namespace CleanArchitecture.Domain
+﻿using CleanArchitecture.Domain.Common;
+
+namespace CleanArchitecture.Domain
 {
-    public class VideoActor
+    public class VideoActor : BaseDomainModel
     {
         //Tabla que contiene la relacion
         public int VideoId { get; set; }
