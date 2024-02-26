@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
+
 namespace CleanArchitecture.Application
 {
     public static class ApplicationServiceRegistration
